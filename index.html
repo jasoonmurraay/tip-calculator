@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="app.css">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <img src="images/logo.svg" alt="" class="logo">
+    <div class="card">
+      <div class="smallCard1">
+
+        <div class="billInput">
+          <label for="bill">Bill</label>
+          <div class="billInputArea">
+            <img src="images/icon-dollar.svg" alt="">
+            <input id="bill" type="number" placeholder="0.00" min="0.01">
+          </div>
+        </div>
+
+        <fieldset>
+          <legend>Select Tip %</legend>
+          <div class="radio-toolbar">
+            <input type="radio" id="fivePct" name="tipPct" value="5">
+            <label for="fivePct">5%</label>
+            <input type="radio" id="tenPct" name="tipPct" value="10">
+            <label for="tenPct">10%</label>
+            <input type="radio" id="fifteenPct" name="tipPct" value="15">
+            <label for="fifteenPct">15%</label>
+            <input type="radio" id="twentyPct" name="tipPct" value="20">
+            <label for="twentyPct">20%</label>
+            <input type="radio" id="twentyfivePct" name="tipPct" value="25">
+            <label for="twentyfivePct">25%</label>
+            <input type="radio" id="customPct" name="tipPct" value="custom">
+            <label for="customPct">Custom</label>
+          </div>
+        </fieldset>
+        <div class="customInput">
+          <label for="customInputArea">Enter Custom Tip:</label>
+          <input id="customInputArea" type="percent">
+        </div>
+        <div class="numPeopleInput">
+          <div class="numPeopleLabels">
+            <label for="numPeople">Number of People</label>
+            <p class="numPeopleErrorMsg">Cannot be less than 1</p>
+          </div>
+          <div class="numPeopleInputArea">
+            <img src="images/icon-person.svg" alt="">
+            <input id="numPeople" type="number" placeholder="0" min="1">
+          </div>
+        </div>
+      </div>
+      <div class="smallCard2">
+        <div class="eachTip">
+          <div class="splitLabel">
+            Tip Amount
+            <span>/ person</span>
+          </div>
+          <div class="eachTipAmount">$0.00</div>
+        </div>
+
+        <div class="eachTotal">
+          <div class="splitLabel">
+            Total
+            <span>/ person</span>
+          </div>
+          <div class="eachTotalAmount">$0.00</div>
+        </div>
+
+        <button class="resetButton">Reset</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
