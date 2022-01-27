@@ -46,15 +46,15 @@
         <fieldset>
           <legend>Select Tip %</legend>
           <div class="radio-toolbar">
-            <input type="radio" id="fivePct" name="tipPct" value="5">
+            <input type="radio" id="fivePct" name="tipPct" value=".05">
             <label for="fivePct">5%</label>
-            <input type="radio" id="tenPct" name="tipPct" value="10">
+            <input type="radio" id="tenPct" name="tipPct" value=".10">
             <label for="tenPct">10%</label>
-            <input type="radio" id="fifteenPct" name="tipPct" value="15">
+            <input type="radio" id="fifteenPct" name="tipPct" value=".15">
             <label for="fifteenPct">15%</label>
-            <input type="radio" id="twentyPct" name="tipPct" value="20">
+            <input type="radio" id="twentyPct" name="tipPct" value=".20">
             <label for="twentyPct">20%</label>
-            <input type="radio" id="twentyfivePct" name="tipPct" value="25">
+            <input type="radio" id="twentyfivePct" name="tipPct" value=".25">
             <label for="twentyfivePct">25%</label>
             <input type="radio" id="customPct" name="tipPct" value="custom">
             <label for="customPct">Custom</label>
@@ -62,7 +62,7 @@
         </fieldset>
         <div class="customInput">
           <label for="customInputArea">Enter Custom Tip:</label>
-          <input id="customInputArea" type="percent">
+          <input id="customInputArea" type="number">
         </div>
         <div class="numPeopleInput">
           <div class="numPeopleLabels">
@@ -81,7 +81,7 @@
             Tip Amount
             <span>/ person</span>
           </div>
-          <div class="eachTipAmount">$0.00</div>
+          <div class="eachTipAmount"><span id="eachTipDisplay">$0.00</span></div>
         </div>
 
         <div class="eachTotal">
@@ -89,7 +89,7 @@
             Total
             <span>/ person</span>
           </div>
-          <div class="eachTotalAmount">$0.00</div>
+          <div class="eachTotalAmount"><span id="eachTotalDisplay">$0.00</span></div>
         </div>
 
         <button class="resetButton">Reset</button>
