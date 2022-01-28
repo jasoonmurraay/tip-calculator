@@ -1,6 +1,4 @@
 const bill = document.querySelector('#bill')
-
-// const billValue = Number(bill.value);
 const fivePct = document.querySelector('#fivePct')
 const tenPct = document.querySelector('#tenPct')
 const fifteenPct = document.querySelector('#fifteenPct')
@@ -9,24 +7,12 @@ const twentyfivePct = document.querySelector('#twentyfivePct')
 let tip = document.querySelectorAll('input[name="tipPct"]')
 const customPct = document.querySelector('#customPct')
 const numPeople = document.querySelector('#numPeople')
-// const eachTipAmount = document.querySelector('.eachTipAmount')
-// const eachTotalAmount = document.querySelector('.eachTotalAmount')
 const customInput = document.querySelector('.customInput')
 const customInputArea = document.querySelector('#customInputArea')
 const eachTipDisplay = document.querySelector('#eachTipDisplay')
 const eachTotalDisplay = document.querySelector('#eachTotalDisplay')
 
 const numPeopleErrorMsg = document.querySelector('.numPeopleErrorMsg')
-
-
-
-// function tipPct() {
-//     for (let i = 0; i < tip.length; i++) {
-//         tip[i].addEventListener('change', function () {
-//             let tipPct = (tip[i].value)
-//         })
-//     }
-// }
 
 tipPct = 0;
 
