@@ -2,7 +2,13 @@ body {
     background-color: hsl(185, 41%, 84%);
     font-family: 'Space Mono', monospace;
 }
-
+.logo {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+}
 .card {
     background-color: white;
     position: absolute;
@@ -27,8 +33,16 @@ body {
     display: flex;
     flex-direction: column;
 }
+.customInput {
+    display: flex;
+    flex-direction: column;
+    display: none;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    align-self: right;
+}
 
-.billInputArea, .numPeopleInputArea {
+.billInputArea, .numPeopleInputArea, .customInputArea {
     background-color: hsl(189, 41%, 97%);
     display: flex;
     flex-direction: row;
@@ -37,11 +51,17 @@ body {
     padding: 1rem;
 }
 
+#customInputArea {
+    background-color: hsl(189, 41%, 97%);
+    border: none;
+    outline: none;
+    padding: 1rem;
+}
+
 .numPeopleLabels {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-size: 12px;
 }
 
 .numPeopleErrorMsg {
@@ -65,6 +85,23 @@ body {
 fieldset {
     border: none;
     padding: 0;
+    margin: 0;
+}
+
+input {
+    text-align: right;
+    outline: none;
+    border: none;
+    background-color: hsl(189, 41%, 97%);
+}
+
+input:focus {
+    outline: none;
+    border: none;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    appearance: none;
     margin: 0;
 }
 
@@ -105,11 +142,7 @@ fieldset {
     color: hsl(183, 100%, 15%);
   }
 
-.customInput {
-    display: none;
-    margin-top: 0.25rem;
-    margin-bottom: 1rem;
-}
+
 
 .smallCard2 {
     background-color: hsl(183, 100%, 15%);
@@ -165,4 +198,75 @@ fieldset {
 .resetButton:hover {
     background-color: hsl(185, 41%, 84%);
     cursor: pointer;
+}
+
+.attribution {
+    position: absolute;
+    top: 100%;
+}
+
+@media (max-width: 1200px) {
+    .card{
+        width: 70%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .card {
+        width: 80%;
+    }
+}
+
+@media (max-width: 1000px) {
+    
+    .card {
+        width: 90%;
+    }
+    .smallCard1 {
+        padding: 1rem;
+        width: 90%;
+    }
+    .smallCard2{
+        width: 80%;
+    }
+}
+
+@media (max-width: 825px) {
+    .logo {
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .card   {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .radio-toolbar {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 400px) {
+    .eachTip, .eachTotal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .eachTotal {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 299px) {
+    .card {
+        width: 100%;
+    }
 }
